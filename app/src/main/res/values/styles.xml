@@ -71,4 +71,6 @@
     <style name="Shalimar_Regular">
         <item name="android:fontFamily">@font/shalimar_regular</item>
     </style>
+
+
 </resources>

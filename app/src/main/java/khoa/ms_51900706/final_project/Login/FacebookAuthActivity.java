@@ -63,10 +63,8 @@ public class FacebookAuthActivity extends LoginActivity {
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         FirebaseUser user = mAuth.getCurrentUser();
-                        Toast.makeText(FacebookAuthActivity.this, "1", Toast.LENGTH_SHORT).show();
                         updateUI(user);
                     } else {
-                        Toast.makeText(FacebookAuthActivity.this, "2", Toast.LENGTH_SHORT).show();
                         updateUI(null);
                     }
                 });

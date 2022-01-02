@@ -65,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
     public static final int EDIT_NODE_REQUEST = 2;
     public static final int DELETE_NODE_REQUEST = 3;
     private NoteViewModel noteViewModel;
+    Button btnSetting, btnExit, btnOpen;
+    Boolean isLock;
+    private Lock lock;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,14 +75,32 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         sessionManagement = new SessionManagement(MainActivity.this);
 
-//        uid = sessionManagement.getSession();
+        //set font app
+        new AppFontManager(this).setFontStyle();
+
+        //set theme app
+        setTheme(Constant.theme);
+
+        btnSetting = findViewById(R.id.btnSetting);
+        DatabaseHandler db = new DatabaseHandler(this);
+
+        btnSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this,SettingActivity.class);
+                startActivity(i);
+            }
+        });
+
+
+        uid = sessionManagement.getSession();
 //
-//        if (uid.equals("")) {
-//            moveToLoginActivity();
-//        }
+        if (uid.equals("")) {
+            moveToLoginActivity();
+        }
 //
-//        user = new User();
-//        user.setUid(uid);
+        user = new User();
+        user.setUid(uid);
 //
 //        img = findViewById(R.id.image);
 //        name = findViewById(R.id.name);
@@ -104,17 +125,17 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 //
-//        logout = findViewById(R.id.logout);
-//
-//        logout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                FirebaseAuth.getInstance().signOut();
-//                sessionManagement.removeSession();
-//
-//                moveToLoginActivity();
-//            }
-//        });
+        logout = findViewById(R.id.logout);
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                sessionManagement.removeSession();
+
+                moveToLoginActivity();
+            }
+        });
 
         FloatingActionButton buttonAddNote = findViewById(R.id.button_add_node);
         buttonAddNote.setOnClickListener(new View.OnClickListener() {

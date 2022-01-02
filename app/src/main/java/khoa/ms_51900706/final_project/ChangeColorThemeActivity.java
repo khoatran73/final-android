@@ -1,11 +1,16 @@
 package khoa.ms_51900706.final_project;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 
 public class ChangeColorThemeActivity extends AppCompatActivity {
 
@@ -24,6 +29,7 @@ public class ChangeColorThemeActivity extends AppCompatActivity {
         methods = new khoa.ms_51900706.final_project.Methods();
 
         inIt();
+        writeThemeColorToFile(String.valueOf(constant.color),ChangeColorThemeActivity.this);
 
         btnC1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +78,7 @@ public class ChangeColorThemeActivity extends AppCompatActivity {
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(ChangeColorThemeActivity.this, MainActivity.class);
+                Intent i = new Intent(ChangeColorThemeActivity.this, khoa.ms_51900706.final_project.SettingActivity.class);
                 startActivity(i);
             }
         });
@@ -91,5 +97,16 @@ public class ChangeColorThemeActivity extends AppCompatActivity {
     public void reset() {
         Intent i = new Intent(this,ChangeColorThemeActivity.class);
         startActivity(i);
+    }
+
+    public static void writeThemeColorToFile(String data, Context context){
+        try {
+            OutputStreamWriter outputStream = new OutputStreamWriter(context.openFileOutput("themeColor.txt",Context.MODE_PRIVATE));
+            outputStream.write(data);
+            outputStream.close();
+
+        }catch (IOException e){
+            Log.e("Exception","File write failed "+e.toString());
+        }
     }
 }

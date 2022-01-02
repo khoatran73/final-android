@@ -17,8 +17,34 @@
         <activity
             android:name=".SpeechToText"
             android:exported="true" >
-
         </activity>
+        <activity
+            android:name=".ChangeColorThemeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ChangeFontActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SettingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AddEditNoteActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ChangeTextColorActivity"
+            android:exported="true" />
+        <activity
+            android:name=".FontSizeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LockAppActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LockScreenActivity"
+            android:exported="true" />
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="true" />
         <activity
             android:name=".Login.GoogleAuthActivity"
             android:exported="true" />
@@ -28,7 +54,6 @@
         <activity
             android:name=".Login.LoginActivity"
             android:exported="true">
-
         </activity>
         <activity
             android:name=".MainActivity"

@@ -5,25 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SettingActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardMode"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_baseline_nights_stay_24"/>
+
             <TextView
                 android:id="@+id/tvMode"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 android:padding="5dp"
-                android:text="Light mode"
+                android:text="Chế độ giao diện tối"
                 />
 
             <Switch
@@ -37,54 +48,223 @@
     </androidx.cardview.widget.CardView>
 
    <androidx.cardview.widget.CardView
+       android:id="@+id/cardColorPrimary"
        android:layout_width="match_parent"
-       android:layout_height="wrap_content">
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="1dp">
        <LinearLayout
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:padding="10dp"
            >
+
+           <ImageView
+               android:layout_width="30dp"
+               android:layout_height="match_parent"
+               android:src="@drawable/ic_baseline_color_lens_24"
+               android:layout_marginRight="10dp"/>
+
            <TextView
                android:layout_width="0dp"
                android:layout_weight="1"
                android:layout_height="match_parent"
-               android:textSize="24sp"
+               android:textSize="22sp"
                android:textStyle="bold"
                android:padding="5dp"
-               android:text="Đổi màu chủ đề"/>
+               android:text="Màu chủ đề"/>
 
-           <ImageView
-               android:id="@+id/btnColor"
-               android:src="@drawable/ic_baseline_navigate_next_24"
-               android:layout_width="wrap_content"
-               android:layout_height="match_parent"
-               />
+           <Button
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+               android:layout_gravity="center"/>
        </LinearLayout>
    </androidx.cardview.widget.CardView>
    <androidx.cardview.widget.CardView
+       android:id="@+id/cardFont"
        android:layout_width="match_parent"
-       android:layout_height="wrap_content">
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="1dp">
 
        <LinearLayout
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:padding="10dp"
            >
-           <TextView
-               android:layout_width="0dp"
-               android:layout_weight="1"
-               android:layout_height="match_parent"
-               android:textSize="24sp"
-               android:textStyle="bold"
-               android:padding="5dp"
-               android:text="Font style"/>
 
            <ImageView
-               android:id="@+id/imgFontStyle"
+               android:layout_width="30dp"
+               android:layout_height="match_parent"
+               android:src="@drawable/ic_baseline_font_download_24"
+               android:layout_marginRight="10dp"/>
+
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:padding="5dp"
+               android:text="Font"
+               android:textSize="22sp"
+               android:textStyle="bold" />
+
+           <ImageView
                android:src="@drawable/ic_baseline_navigate_next_24"
                android:layout_width="wrap_content"
                android:layout_height="match_parent"
+               android:text="Font hệ thống"
+               android:gravity="center"
                />
        </LinearLayout>
    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFontSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:layout_width="30dp"
+                android:text="A"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="Kích cỡ Font"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:src="@drawable/ic_baseline_navigate_next_24"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFontColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+
+            <ImageView
+                android:src="@drawable/ic_baseline_text_format_24"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="Màu chữ"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:src="@drawable/ic_baseline_navigate_next_24"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+
+            <ImageView
+                android:src="@drawable/ic_baseline_text_format_24"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="Nhắc nhở cập nhật"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Switch
+                android:id="@+id/switchNoti"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:checked="false"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardLockApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+
+            <ImageView
+                android:src="@drawable/ic_baseline_text_format_24"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="Khoá nhật ký"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Switch
+                android:id="@+id/switchLock"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:checked="false"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnGoMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="go to main act"/>
 </LinearLayout>
