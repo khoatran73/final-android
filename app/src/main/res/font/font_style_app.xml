@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <font android:font="@font/dosis_regular">dosis_regular</font>
+    <font android:font="@font/corinthia_bold">corinthia</font>
+    <font android:font="@font/dancing_script">dancing</font>
+    <font android:font="@font/dancing_script_bold">dancing_bold</font>
+    <font android:font="@font/dancing_script_medium">dancing_medium</font>
+    <font android:font="@font/dancingscript_regular">dancing_regular</font>
+    <font android:font="@font/dancingscript_semi_bold">dancing_semi_bold</font>
+    <font android:font="@font/indieflower_regular">indief_flower_regular</font>
+
+</font-family>

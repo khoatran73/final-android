@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Study/Android/CuoiKy/Login/app/src/main/res/2/drawable/ic_baseline_navigate_next_24.xml" value="0.2546875" />
+        <entry key="..\:/Study/Android/CuoiKy/Login/app/src/main/res/drawable-v24/background.xml" value="0.2546875" />
+        <entry key="..\:/Study/Android/CuoiKy/Login/app/src/main/res/drawable-v24/ic_baseline_navigate_next_24.xml" value="0.2546875" />
+        <entry key="..\:/Study/Android/CuoiKy/Login/app/src/main/res/drawable-v24/ic_launcher_background.xml" value="0.2546875" />
+        <entry key="..\:/Study/Android/CuoiKy/Login/app/src/main/res/drawable/button_shadow.xml" value="0.2546875" />
+        <entry key="..\:/Study/Android/CuoiKy/Login/app/src/main/res/layout/activity_add_note.xml" value="0.23854166666666668" />
+        <entry key="..\:/Study/Android/CuoiKy/Login/app/src/main/res/layout/activity_change_color_theme.xml" value="0.23854166666666668" />
+        <entry key="..\:/Study/Android/CuoiKy/Login/app/src/main/res/layout/activity_change_font.xml" value="0.23854166666666668" />
+        <entry key="..\:/Study/Android/CuoiKy/Login/app/src/main/res/layout/activity_login.xml" value="0.4" />
+        <entry key="..\:/Study/Android/CuoiKy/Login/app/src/main/res/layout/activity_main.xml" value="0.23854166666666668" />
+        <entry key="..\:/Study/Android/CuoiKy/Login/app/src/main/res/layout/activity_setting.xml" value="0.23854166666666668" />
+        <entry key="..\:/Study/Android/CuoiKy/Login/app/src/main/res/layout/activity_speech_to_text.xml" value="0.23854166666666668" />
+        <entry key="..\:/Study/Android/CuoiKy/Login/app/src/main/res/layout/login.xml" value="0.23854166666666668" />
+        <entry key="..\:/Study/Android/CuoiKy/Login/app/src/main/res/layout/note_item.xml" value="0.23854166666666668" />
+        <entry key="..\:/Study/Android/CuoiKy/Login/app/src/main/res/menu/add_note_menu.xml" value="0.23854166666666668" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CorinthiaBold">
+        <item name="android:fontFamily">@font/corinthia_bold</item>
+    </style>
+
+    <style name="Dancing">
+        <item name="android:fontFamily">@font/dancing_script</item>
+    </style>
+
+    <style name="DancingBold">
+        <item name="android:fontFamily">@font/dancing_script_bold</item>
+    </style>
+
+    <style name="DancingMedium">
+        <item name="android:fontFamily">@font/dancing_script_medium</item>
+    </style>
+
+    <style name="Dancing_regular">
+        <item name="android:fontFamily">@font/dancingscript_regular</item>
+    </style>
+
+    <style name="Dancing_semi_bold">
+        <item name="android:fontFamily">@font/dancingscript_semi_bold</item>
+    </style>
+
+    <style name="Dosis_Bold">
+        <item name="android:fontFamily">@font/dosis_bold</item>
+    </style>
+
+    <style name="Dosis_extraBold">
+        <item name="android:fontFamily">@font/dosis_extrabold</item>
+    </style>
+
+    <style name="Dosis_extraLight">
+        <item name="android:fontFamily">@font/dosis_extralight</item>
+    </style>
+
+    <style name="Dosis_Light">
+        <item name="android:fontFamily">@font/dosis_light</item>
+    </style>
+
+    <style name="Dosis_Medium">
+        <item name="android:fontFamily">@font/dosis_medium</item>
+    </style>
+
+    <style name="Dosis_regular">
+        <item name="android:fontFamily">@font/dosis_regular</item>
+    </style>
+
+    <style name="Dosis_semiBold">
+        <item name="android:fontFamily">@font/dosis_semibold</item>
+    </style>
+
+    <style name="Fuzzy_Bubbles_Bold">
+        <item name="android:fontFamily">@font/fuzzy_bubbles_bold</item>
+    </style>
+
+    <style name="Fuzzy_Bubbles_Regular">
+        <item name="android:fontFamily">@font/fuzzy_bubbles_regular</item>
+    </style>
+
+    <style name="Indie_Flower_Regular">
+        <item name="android:fontFamily">@font/indieflower_regular</item>
+    </style>
+
+    <style name="Shadow_into_light_regular">
+        <item name="android:fontFamily">@font/shadows_into_light_regular</item>
+    </style>
+
+    <style name="Shalimar_Regular">
+        <item name="android:fontFamily">@font/shalimar_regular</item>
+    </style>
+</resources>
