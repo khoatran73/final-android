@@ -33,8 +33,10 @@ public class LockScreenActivity extends AppCompatActivity {
         lock = db.getLock(1);
 
        if(!Boolean.parseBoolean(lock.getLock())){
-            Intent intent = new Intent(LockScreenActivity.this, khoa.ms_51900706.final_project.MainActivity.class);
-            startActivity(intent);
+            Intent i = new Intent(LockScreenActivity.this, khoa.ms_51900706.final_project.MainActivity.class);
+               i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+               i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(i);
         }
         getID();
 //        String color = readMainColor(this);
@@ -55,6 +57,8 @@ public class LockScreenActivity extends AppCompatActivity {
                     lock.setFlag("true");
                     db.updateLock(lock);
                     Intent i = new Intent(LockScreenActivity.this, khoa.ms_51900706.final_project.MainActivity.class);
+                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(i);
                 }
             }

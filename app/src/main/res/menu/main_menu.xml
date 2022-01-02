@@ -12,4 +12,12 @@
     <item android:title="Restore"
         app:showAsAction="never"
         android:id="@+id/restore_all_notes"/>
+
+    <item android:title="Setting"
+        app:showAsAction="never"
+        android:id="@+id/setting_btn"/>
+
+    <item android:title="Logout"
+        app:showAsAction="never"
+        android:id="@+id/logout_btn"/>
 </menu>

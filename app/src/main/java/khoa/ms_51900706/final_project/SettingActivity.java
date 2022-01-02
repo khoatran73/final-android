@@ -88,7 +88,7 @@ public class SettingActivity extends AppCompatActivity {
         cardFont.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(SettingActivity.this, khoa.ms_51900706.final_project.ChangeFontActivity.class);
+                Intent i = new Intent(SettingActivity.this, ChangeFontActivity.class);
                 startActivity(i);
             }
         });
@@ -132,8 +132,11 @@ public class SettingActivity extends AppCompatActivity {
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(SettingActivity.this, khoa.ms_51900706.final_project.MainActivity.class);
+                Intent i = new Intent(SettingActivity.this, MainActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);
+//                finish();
             }
         });
 
@@ -153,8 +156,6 @@ public class SettingActivity extends AppCompatActivity {
                 Toast.makeText(SettingActivity.this,lock.getLock(),Toast.LENGTH_LONG).show();
             }
         });
-
-
     }
 
     private void getID(){

@@ -98,6 +98,8 @@ public class ChangeTextColorActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(ChangeTextColorActivity.this, khoa.ms_51900706.final_project.SettingActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);
             }
         });
@@ -138,6 +140,8 @@ public class ChangeTextColorActivity extends AppCompatActivity {
 
     private void reset(){
         Intent i = new Intent(ChangeTextColorActivity.this,ChangeTextColorActivity.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(i);
     }
 }

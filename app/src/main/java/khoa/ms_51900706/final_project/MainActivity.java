@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -81,16 +82,12 @@ public class MainActivity extends AppCompatActivity {
         //set theme app
         setTheme(Constant.theme);
 
-        btnSetting = findViewById(R.id.btnSetting);
         DatabaseHandler db = new DatabaseHandler(this);
 
-        btnSetting.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this,SettingActivity.class);
-                startActivity(i);
-            }
-        });
+        lock = new Lock(1,"123456","false","false");
+        db.addLock(lock);
+
+        lock = db.getLock(1);
 
 
         uid = sessionManagement.getSession();
@@ -125,18 +122,6 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 //
-        logout = findViewById(R.id.logout);
-
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                sessionManagement.removeSession();
-
-                moveToLoginActivity();
-            }
-        });
-
         FloatingActionButton buttonAddNote = findViewById(R.id.button_add_node);
         buttonAddNote.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -192,13 +177,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void moveToLoginActivity() {
-        Intent i = new Intent(MainActivity.this, LoginActivity.class);
-        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(i);
-    }
-
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -252,6 +230,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
@@ -307,10 +286,18 @@ public class MainActivity extends AppCompatActivity {
                     ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},2);
                 }
                 return true;
+            case R.id.setting_btn:
+                Intent i = new Intent(MainActivity.this, SettingActivity.class);
+                startActivity(i);
+                return true;
+            case R.id.logout_btn:
+                FirebaseAuth.getInstance().signOut();
+                sessionManagement.removeSession();
+                moveToLoginActivity();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
-
     }
 
     public static void copy(File src, File dst) throws IOException {
@@ -323,5 +310,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    private void moveToLoginActivity() {
+        Intent i = new Intent(MainActivity.this, LoginActivity.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(i);
     }
 }

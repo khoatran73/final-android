@@ -8,12 +8,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Logout"
-        android:id="@+id/logout"></Button>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
@@ -37,11 +31,6 @@
         android:layout_marginTop="12dp"
         android:layout_marginRight="10dp"
         app:srcCompat="@drawable/ic_search" />
-    <Button
-        android:id="@+id/btnSetting"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Cài đặt"/>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -54,6 +54,8 @@ public class NotificationActivity extends AppCompatActivity {
                 constant.minute = pickerMinute.getValue();
                 constant.hour = pickerHour.getValue();
                 Intent i = new Intent(NotificationActivity.this, khoa.ms_51900706.final_project.SettingActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);
             }
         });
